@@ -79,7 +79,7 @@ python ../tensorflow/models/research/object_detection/export_inference_graph.py 
 The final step is to evaluate the trained model saved in `../output/` directory. There are two ways to evaluate, using *eval.py* to calculating the total accuracy, or using *object_detection_pic.py* to evaluate a single image. The following shows both two ways.
 
 ### Calculating MAP@n 
-Use eval.py file and can evaluate using following command:
+Use *eval.py* file and evaluate using following command:
 
 ```
 python ../tensorflow/models/research/object_detection/eval.py \
