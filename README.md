@@ -63,7 +63,7 @@ python3 ../tensorflow/models/research/train.py \
 
 ## Save Model
 
-Before Evaluating, models must be saved.
+Before Evaluating, models must be saved. The codes is in `/codes/train.sh`.
 
 ```
 # save Model
@@ -89,12 +89,25 @@ python ../tensorflow/models/research/object_detection/eval.py \
     --eval_dir=../output/output_100000_train_faster_RCNN_Inception_ResNet_v2_0802/eval/
 ```
 
-This will save the eval results in *eval/* directory. Tensor board could visualize both training and evaling process.
+This will save the eval results in *eval/* directory. There is a excellent tools: TensorBoard, which could visualize both training and evaling process. To launch TensorBoard (while you visualize the eval results, it would also visualize the training results at the same time), using following command in a new Terminal and locate the terminal in the file:
 
+```
 #To visualize the eval results
-tensorboard --logdir=eval/
+tensorboard --logdir=../output/output_100000_train_faster_RCNN_Inception_ResNet_v2_0802/eval/
 #TO visualize the training results
-tensorboard --logdir=training/
+tensorboard --logdir=../output/output_100000_train_faster_RCNN_Inception_ResNet_v2_0802
+```
 
+Instructions for TensorBoard for the beginners: [TensorBoard](https://github.com/tensorflow/tensorboard).
 
 ### Evaluating a single image
+
+The codes are in `/codes/train.sh`, remember to change the dir.
+
+```
+# Evaluate Model
+python ../codes/object_detection_pic_0.75_train-test_faster_RCNN_Inception_ResNet_v2.py
+```
+
+
+
